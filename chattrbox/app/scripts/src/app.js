@@ -53,4 +53,4 @@ class ChatMessage {
   }
 }
 
-export default ChatApp();
+export default ChatApp;
