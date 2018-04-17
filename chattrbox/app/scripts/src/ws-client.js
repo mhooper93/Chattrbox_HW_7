@@ -2,7 +2,7 @@ let socket;
 
 function init(url)  {
   socket = new WebSocket(url);
-  console.log('connecting...');
+  console.log("connecting...");
 }
 
 function registerOpenHandler(handlerFunction) {
@@ -29,4 +29,4 @@ export default {
   registerOpenHandler,
   registerMessageHandler,
   sendMessage
-}
+};

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from "jquery";
 import md5 from "crypto-js/md5";
 import moment from "moment";
 
@@ -7,7 +7,7 @@ function createGravatarUrl(username){
   return `http://www.gravatar.com/avatar/${userhash.toString()}`;
 }
 
-export function promptForUsername(){
+export function promptForUsername() {
   let username = prompt( "Enter a username");
   return username.toLowerCase();
 }
@@ -23,15 +23,15 @@ export class ChatForm {
       event.preventDefault();
       let val = this.$input.val();
       submitCallback(val);
-      this.$input.val('');
+      this.$input.val("");
     });
-    this.$form.find('button').on('click', () => this.$form.submit());
+    this.$form.find("button").on("click", () => this.$form.submit());
   }
 }
 
 export class ChatList {
   constructor(listSel, username){
-    this.$list = $(listSe);
+    this.$list = $(listSel);
     this.username = username;
   }
 
@@ -40,12 +40,12 @@ export class ChatList {
       "class": "message-row"
     });
     if (this.username === u){
-      $messageRow.addClass('me');
+      $messageRow.addClass("me");
     }
     let $message = $("<p>");
 
     $message.append($("<span>", {
-      "class": message-username,
+      "class": "message-username",
       text: u
     }));
 
@@ -73,9 +73,9 @@ export class ChatList {
 
   init() {
     this.timer = setInterval(() => {
-      $('[data-time]').each((idx, element) => {
+      $("[data-time]").each((idx, element) => {
         let $element = $(element);
-        let timestamp = new Date().setTime($element.attr('data-time'));
+        let timestamp = new Date().setTime($element.attr("data-time"));
         let ago = moment(timestamp).fromNow();
         $element.html(ago);
       });
