@@ -14,4 +14,3 @@ var extractFilePath = function (url) {
 };
 
 module.exports = extractFilePath;
- 
